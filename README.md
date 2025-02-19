@@ -4,7 +4,7 @@
 
 ### Expire Tokens
 ```bash
-./gitlab-token-manager.sh expire {analyze|extend} [OPTIONS]
+./gitlab-rake-tokens.sh expire {analyze|extend} [OPTIONS]
 ```
 - `analyze` - Check tokens expiring in the next `X` days.
 - `extend`  - Extend tokens expiring in the next `X` days.
@@ -16,7 +16,7 @@
 
 ### User Tokens
 ```bash
-./gitlab-token-manager.sh user {analyze|extend} [OPTIONS]
+./gitlab-rake-tokens.sh user {analyze|extend} [OPTIONS]
 ```
 - `analyze` - Check tokens for specific users.
 - `extend`  - Extend user tokens.
@@ -30,16 +30,16 @@
 
 ### Expire Tokens
 ```bash
-./gitlab-token-manager.sh expire analyze -d 7
-./gitlab-token-manager.sh expire extend -d 7 -e 30
-./gitlab-token-manager.sh expire extend -d 7 -e 30 -u 1,2
+./gitlab-rake-tokens.sh expire analyze -d 7
+./gitlab-rake-tokens.sh expire extend -d 7 -e 30
+./gitlab-rake-tokens.sh expire extend -d 7 -e 30 -u 1,2
 ```
 
 ### User Tokens
 ```bash
-./gitlab-token-manager.sh user analyze -u 1,2
-./gitlab-token-manager.sh user extend -u 1,2 -e 30
-./gitlab-token-manager.sh user extend -u 1,2 -e 30 -t 10,20
+./gitlab-rake-tokens.sh user analyze -u 1,2
+./gitlab-rake-tokens.sh user extend -u 1,2 -e 30
+./gitlab-rake-tokens.sh user extend -u 1,2 -e 30 -t 10,20
 ```
 
 ## Notes
